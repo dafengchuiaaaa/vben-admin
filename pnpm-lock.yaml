@@ -516,6 +516,10 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      mitt:
+        specifier: ^3.0.1
+        version: 3.0.1
     devDependencies:
       '@changesets/changelog-github':
         specifier: 'catalog:'
@@ -638,6 +642,9 @@ importers:
 
   apps/web-antd:
     dependencies:
+      '@vben-core/menu-ui':
+        specifier: workspace:*
+        version: link:../../packages/@core/ui-kit/menu-ui
       '@vben/access':
         specifier: workspace:*
         version: link:../../packages/effects/access
@@ -689,6 +696,9 @@ importers:
       dayjs:
         specifier: 'catalog:'
         version: 1.11.13
+      mitt:
+        specifier: ^3.0.1
+        version: 3.0.1
       pinia:
         specifier: ^2.3.1
         version: 2.3.1(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))

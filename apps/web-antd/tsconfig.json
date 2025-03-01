@@ -4,9 +4,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#/*": ["./src/*"]
+      "#/*": ["./src/*"],
+      "@vben-core/*": ["../../packages/@core/ui-kit/*"]
     }
   },
   "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/types/**/*.d.ts"
+  ]
 }

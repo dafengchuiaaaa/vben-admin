@@ -63,6 +63,7 @@ async function generateRoutes(
   const { forbiddenComponent, roles, routes } = options;
 
   let resultRoutes: RouteRecordRaw[] = routes;
+  console.warn('mode', mode);
   switch (mode) {
     case 'backend': {
       resultRoutes = await generateRoutesByBackend(options);

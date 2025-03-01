@@ -9,7 +9,7 @@ export namespace AuthApi {
 
   /** 登录接口返回值 */
   export interface LoginResult {
-    accessToken: string;
+    token: string;
   }
 
   export interface RefreshTokenResult {
@@ -38,7 +38,7 @@ export async function refreshTokenApi() {
  * 退出登录
  */
 export async function logoutApi() {
-  return baseRequestClient.post('/auth/logout', {
+  return baseRequestClient.post('/accnotu /logout', {
     withCredentials: true,
   });
 }
@@ -47,5 +47,6 @@ export async function logoutApi() {
  * 获取用户权限码
  */
 export async function getAccessCodesApi() {
-  return requestClient.get<string[]>('/auth/codes');
+  return [];
+  // return requestClient.get<string[]>('/auth/codes');
 }
