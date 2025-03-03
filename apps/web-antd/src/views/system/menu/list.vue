@@ -8,8 +8,6 @@ import { Page, useVbenDrawer } from '@vben/common-ui';
 import { IconifyIcon, Plus } from '@vben/icons';
 import { $t } from '@vben/locales';
 
-import { MenuBadge } from '@vben-core/menu-ui';
-
 import { Button, message } from 'ant-design-vue';
 
 import { useVbenVxeGrid } from '#/adapter/vxe-table';
@@ -138,13 +136,6 @@ function onDelete(row: SystemMenuApi.SystemMenu) {
           <span class="flex-auto">{{ $t(row.meta?.title) }}</span>
           <div class="items-center justify-end"></div>
         </div>
-        <MenuBadge
-          v-if="row.meta?.badgeType"
-          class="menu-badge"
-          :badge="row.meta.badge"
-          :badge-type="row.meta.badgeType"
-          :badge-variants="row.meta.badgeVariants"
-        />
       </template>
     </Grid>
   </Page>

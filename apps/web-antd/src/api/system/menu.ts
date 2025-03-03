@@ -20,10 +20,6 @@ export namespace SystemMenuApi {
     'button',
     'embedded',
     'link',
-    0,
-    1,
-    2,
-    3,
   ] as const;
   /** 系统菜单 */
   export interface SystemMenu {

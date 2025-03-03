@@ -285,169 +285,169 @@ const schema: VbenFormSchema[] = [
     fieldName: 'status',
     label: $t('system.menu.status'),
   },
-  // {
-  //   component: 'Select',
-  //   componentProps: {
-  //     allowClear: true,
-  //     class: 'w-full',
-  //     options: [
-  //       { label: $t('system.menu.badgeType.dot'), value: 'dot' },
-  //       { label: $t('system.menu.badgeType.normal'), value: 'normal' },
-  //     ],
-  //   },
-  //   dependencies: {
-  //     show: (values) => {
-  //       return values.type !== 'button';
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.badgeType',
-  //   label: $t('system.menu.badgeType.title'),
-  // },
-  // {
-  //   component: 'Input',
-  //   componentProps: (values) => {
-  //     return {
-  //       allowClear: true,
-  //       class: 'w-full',
-  //       disabled: values.meta?.badgeType !== 'normal',
-  //     };
-  //   },
-  //   dependencies: {
-  //     show: (values) => {
-  //       return values.type !== 'button';
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.badge',
-  //   label: $t('system.menu.badge'),
-  // },
-  // {
-  //   component: 'Select',
-  //   componentProps: {
-  //     allowClear: true,
-  //     class: 'w-full',
-  //     options: SystemMenuApi.BadgeVariants.map((v) => ({
-  //       label: v,
-  //       value: v,
-  //     })),
-  //   },
-  //   dependencies: {
-  //     show: (values) => {
-  //       return values.type !== 'button';
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.badgeVariants',
-  //   label: $t('system.menu.badgeVariants'),
-  // },
-  // {
-  //   component: 'Divider',
-  //   dependencies: {
-  //     show: (values) => {
-  //       return !['button', 'link'].includes(values.type);
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'divider1',
-  //   formItemClass: 'col-span-2 md:col-span-2 pb-0',
-  //   hideLabel: true,
-  //   renderComponentContent() {
-  //     return {
-  //       default: () => $t('system.menu.advancedSettings'),
-  //     };
-  //   },
-  // },
-  // {
-  //   component: 'Checkbox',
-  //   dependencies: {
-  //     show: (values) => {
-  //       return ['menu'].includes(values.type);
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.keepAlive',
-  //   renderComponentContent() {
-  //     return {
-  //       default: () => $t('system.menu.keepAlive'),
-  //     };
-  //   },
-  // },
-  // {
-  //   component: 'Checkbox',
-  //   dependencies: {
-  //     show: (values) => {
-  //       return ['embedded', 'menu'].includes(values.type);
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.affixTab',
-  //   renderComponentContent() {
-  //     return {
-  //       default: () => $t('system.menu.affixTab'),
-  //     };
-  //   },
-  // },
-  // {
-  //   component: 'Checkbox',
-  //   dependencies: {
-  //     show: (values) => {
-  //       return !['button'].includes(values.type);
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.hideInMenu',
-  //   renderComponentContent() {
-  //     return {
-  //       default: () => $t('system.menu.hideInMenu'),
-  //     };
-  //   },
-  // },
-  // {
-  //   component: 'Checkbox',
-  //   dependencies: {
-  //     show: (values) => {
-  //       return ['catalog', 'menu'].includes(values.type);
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.hideChildrenInMenu',
-  //   renderComponentContent() {
-  //     return {
-  //       default: () => $t('system.menu.hideChildrenInMenu'),
-  //     };
-  //   },
-  // },
-  // {
-  //   component: 'Checkbox',
-  //   dependencies: {
-  //     show: (values) => {
-  //       return !['button', 'link'].includes(values.type);
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.hideInBreadcrumb',
-  //   renderComponentContent() {
-  //     return {
-  //       default: () => $t('system.menu.hideInBreadcrumb'),
-  //     };
-  //   },
-  // },
-  // {
-  //   component: 'Checkbox',
-  //   dependencies: {
-  //     show: (values) => {
-  //       return !['button', 'link'].includes(values.type);
-  //     },
-  //     triggerFields: ['type'],
-  //   },
-  //   fieldName: 'meta.hideInTab',
-  //   renderComponentContent() {
-  //     return {
-  //       default: () => $t('system.menu.hideInTab'),
-  //     };
-  //   },
-  // },
+  {
+    component: 'Select',
+    componentProps: {
+      allowClear: true,
+      class: 'w-full',
+      options: [
+        { label: $t('system.menu.badgeType.dot'), value: 'dot' },
+        { label: $t('system.menu.badgeType.normal'), value: 'normal' },
+      ],
+    },
+    dependencies: {
+      show: (values) => {
+        return values.type !== 'button';
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.badgeType',
+    label: $t('system.menu.badgeType.title'),
+  },
+  {
+    component: 'Input',
+    componentProps: (values) => {
+      return {
+        allowClear: true,
+        class: 'w-full',
+        disabled: values.meta?.badgeType !== 'normal',
+      };
+    },
+    dependencies: {
+      show: (values) => {
+        return values.type !== 'button';
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.badge',
+    label: $t('system.menu.badge'),
+  },
+  {
+    component: 'Select',
+    componentProps: {
+      allowClear: true,
+      class: 'w-full',
+      options: SystemMenuApi.BadgeVariants.map((v) => ({
+        label: v,
+        value: v,
+      })),
+    },
+    dependencies: {
+      show: (values) => {
+        return values.type !== 'button';
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.badgeVariants',
+    label: $t('system.menu.badgeVariants'),
+  },
+  {
+    component: 'Divider',
+    dependencies: {
+      show: (values) => {
+        return !['button', 'link'].includes(values.type);
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'divider1',
+    formItemClass: 'col-span-2 md:col-span-2 pb-0',
+    hideLabel: true,
+    renderComponentContent() {
+      return {
+        default: () => $t('system.menu.advancedSettings'),
+      };
+    },
+  },
+  {
+    component: 'Checkbox',
+    dependencies: {
+      show: (values) => {
+        return ['menu'].includes(values.type);
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.keepAlive',
+    renderComponentContent() {
+      return {
+        default: () => $t('system.menu.keepAlive'),
+      };
+    },
+  },
+  {
+    component: 'Checkbox',
+    dependencies: {
+      show: (values) => {
+        return ['embedded', 'menu'].includes(values.type);
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.affixTab',
+    renderComponentContent() {
+      return {
+        default: () => $t('system.menu.affixTab'),
+      };
+    },
+  },
+  {
+    component: 'Checkbox',
+    dependencies: {
+      show: (values) => {
+        return !['button'].includes(values.type);
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.hideInMenu',
+    renderComponentContent() {
+      return {
+        default: () => $t('system.menu.hideInMenu'),
+      };
+    },
+  },
+  {
+    component: 'Checkbox',
+    dependencies: {
+      show: (values) => {
+        return ['catalog', 'menu'].includes(values.type);
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.hideChildrenInMenu',
+    renderComponentContent() {
+      return {
+        default: () => $t('system.menu.hideChildrenInMenu'),
+      };
+    },
+  },
+  {
+    component: 'Checkbox',
+    dependencies: {
+      show: (values) => {
+        return !['button', 'link'].includes(values.type);
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.hideInBreadcrumb',
+    renderComponentContent() {
+      return {
+        default: () => $t('system.menu.hideInBreadcrumb'),
+      };
+    },
+  },
+  {
+    component: 'Checkbox',
+    dependencies: {
+      show: (values) => {
+        return !['button', 'link'].includes(values.type);
+      },
+      triggerFields: ['type'],
+    },
+    fieldName: 'meta.hideInTab',
+    renderComponentContent() {
+      return {
+        default: () => $t('system.menu.hideInTab'),
+      };
+    },
+  },
 ];
 
 const breakpoints = useBreakpoints(breakpointsTailwind);

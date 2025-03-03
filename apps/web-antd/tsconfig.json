@@ -5,8 +5,9 @@
     "baseUrl": ".",
     "paths": {
       "#/*": ["./src/*"],
-      "@vben-core/*": ["../../packages/@core/ui-kit/*"]
-    }
+      "@vben-core/*": ["../../packages/@core/*"]
+    },
+    "types": ["vite/client"]
   },
   "references": [{ "path": "./tsconfig.node.json" }],
   "include": [
